@@ -3,25 +3,158 @@
   <head>
     <meta charset="UTF-8">
     <title>Fork Me! FCC: Test Suite Template</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
     <link rel="stylesheet" href="css/style.css">
   </head>
 
   <body>
-  <h1 id="title">Survey form<h1>
-    <p id="description">This is survey form for students that are applying to microverse</p>
-    <form id="survey-form">
-      <label id="name-label">Name</label>
-      <input type="text" id="name" placeholder="write your fullname">
-      <label id="email-lable">Email</label>
-      <input type="email" id="email" placeholder="write your email">
-      <label id="number-label">Number</label>
-      <input type="number" id="number" placeholder="write your number">
-      <select id ="dropdown"><option>Choose an option</option></select>
-    </form>
-    
-    
-    
-    
+    <div class="container">
+      <header class="header">
+        <h1 id="title" class="text-center">Microverse survey form </h1>
+        <p id="description" class="description text-center">
+          Kindly fill in the details below
+        </p>
+      </header>
+      <form id="survey-form">
+        <div class="form-group">
+          <label id="name-label" for="name">Name</label>
+          <input
+            type="text"
+            name="name"
+            id="name"
+            class="form-control"
+            placeholder="Enter your name"
+            required
+          />
+        </div>
+        <div class="form-group">
+          <label id="email-label" for="email">Email</label>
+          <input
+            type="email"
+            name="email"
+            id="email"
+            class="form-control"
+            placeholder="Enter your Email"
+            required
+          />
+        </div>
+        <div class="form-group">
+          <label id="number-label" for="number"
+            >Phone number<span class="clue">(optional)</span></label
+          >
+          <input
+            type="number"
+            name="phone_number"
+            id="number"
+            min="10"
+            max="14"
+            class="form-control"
+            placeholder="Number"
+          />
+        </div>
+        <div class="form-group">
+          <p>Which role would you like to enroll?</p>
+          <select id="dropdown" name="role" class="form-control" required>
+            <option disabled selected value>Select role</option>
+            <option value="frontend">Frontend Software developer</option>
+            <option value="fullstack">Fullstack Software developer</option>
+            <option value="backend">Backend Software developer</option>
+            
+          </select>
+        </div>
+
+        <div class="form-group">
+          <p>Select Gender</p>
+          <label>
+            <input
+              name="gender"
+              value="female"
+              type="radio"
+              class="input-radio"
+              checked
+            />Female</label
+          >
+          <label>
+            <input
+              name="gender"
+              value="male"
+              type="radio"
+              class="input-radio"
+            />Male</label
+          >
+
+          <label
+            ><input
+              name="gender"
+              value="other"
+              type="radio"
+              class="input-radio"
+            />Other</label
+          >
+        </div>
+
+      
+
+        <div class="form-group">
+          <p>
+            Which languages are you most comfortable with?
+            <span class="clue">(Check all that apply)</span>
+          </p>
+
+          <label
+            ><input
+              name="prefer"
+              value="java"
+              type="checkbox"
+              class="input-checkbox"
+            />Java</label
+          >
+          <label>
+            <input
+              name="prefer"
+              value="javascript"
+              type="checkbox"
+              class="input-checkbox"
+            />javascript</label
+          >
+          <label
+            ><input
+              name="prefer"
+              value="python"
+              type="checkbox"
+              class="input-checkbox"
+            />python</label
+          >
+          <label
+            ><input
+              name="prefer"
+              value="Ruby"
+              type="checkbox"
+              class="input-checkbox"
+            />Ruby</label
+          >
+         
+        </div>
+
+        <div class="form-group">
+          <p>Any comments or suggestions?</p>
+          <textarea
+            id="comments"
+            class="input-textarea"
+            name="comment"
+            placeholder="Enter your comment here..."
+          ></textarea>
+        </div>
+
+        <div class="form-group">
+          <button type="submit" id="submit" class="submit-button">
+            Submit
+          </button>
+        </div>
+      </form>
+    </div>
     
     
     
@@ -44,6 +177,7 @@
 
     -->
     <script  src="js/index.js"></script>
+  </div>
   </body>
 
 </html>
